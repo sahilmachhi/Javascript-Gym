@@ -12,7 +12,7 @@ var age = 23;
 
 // Boolean 
 
-var isLogeedIn = ture; 
+var isLogeedIn = true; 
 
 // null => standalone value
 
@@ -21,6 +21,10 @@ let myVariable = null;
 console.log(myVariable);
 
 // null is used when you have to give empty value to any variable and null is empty value 
+
+// also type of null returns as object 
+
+console.log(null);
 
 
 // undefined 

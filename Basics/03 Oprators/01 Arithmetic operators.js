@@ -45,5 +45,3 @@ console.log(B);
 // where A++ is first print the number then increment it so you can see its effect after another console log same goes with A--
 
 
-// assignment oprators 
-

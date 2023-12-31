@@ -21,7 +21,7 @@ function newYearCalculator() {
   secs.innerText = addZero(sec);
 
   function addZero(value) {
-    console.log(value);
+    // console.log(value);
     if (value < 10) {
       value = `0${value}`;
     }
@@ -30,7 +30,7 @@ function newYearCalculator() {
 
   if (day == 0 && hour == 0 && min == 0 && sec == 0) {
     clearInterval(countdownYear);
-    console.log("countdown stopped");
+    // console.log("countdown stopped");
     h1.innerText = "Happy New Year🎉🎊✨";
     h1.classList.toggle("glow");
     h1.classList.toggle("h1");

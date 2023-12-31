@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;900&family=Poppins:wght@100;300;400;700;900&display=swap');@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;900&family=Poppins:wght@100;300;400;700;900&display=swap');
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -10,14 +12,28 @@ body {
     justify-content: center;
     flex-direction: column;
     height: 100vh;
-    gap: 10rem;
+    background-image: url(ian-schneider-PAykYb-8Er8-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    font-family: 'Poppins', sans-serif;
 }
 
 .date-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5rem;
+    /* gap: 5rem; */
+    backdrop-filter: blur(10px);
+    border: 2px solid white;
+    padding: 20px 40px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 50px;
+background-color: rgba(255, 255, 255, 0.2);
+    /* css shadow  */
+    box-shadow: rgba(100, 100, 111, 1) 0px 7px 29px 0px;
 }
 
 .date {
@@ -26,3 +42,53 @@ body {
     flex-direction: column;
     gap: 0.8rem;
 }
+.h1 {
+    font-size: 5rem;
+    text-shadow: 0px 7px 29px  rgba(0, 0, 0, 1) ;
+    /* text-shadow:  0px 0px 1px whitesmoke,
+    0px 0px 3px whitesmoke,
+    0px 0px 5px whitesmoke,
+    0px 0px 10px whitesmoke; */
+    /* transition: 5000ms; */
+    bottom: 100px;
+    position: relative;
+}
+.bigfont {
+    font-size: 5rem;
+    text-shadow: 0px 7px 29px rgb(0, 0, 0);
+    width: 200px;
+}
+
+.smaillfont {
+    font-size: 2rem;
+    text-shadow: 0px 7px 29px rgb(0, 0, 0);
+    transition: 1000ms;
+}
+
+.glow {
+    color: white;
+    animation: glowUpDown 2s infinite;
+    font-size: 5rem;
+    bottom: 100px;
+    position: relative;
+}
+
+@keyframes glowUpDown {
+    0% {
+      text-shadow: 0px 0px 1px whitesmoke,
+                   0px 0px 5px whitesmoke,
+                   0px 0px 10px whitesmoke;
+    }
+    
+    50% {
+      text-shadow: 0px 0px 10px whitesmoke,
+                   0px 0px 20px whitesmoke,
+                   0px 0px 30px whitesmoke;
+    }
+    
+    100% {
+        text-shadow: 0px 0px 1px whitesmoke,
+                    0px 0px 5px whitesmoke,
+                    0px 0px 10px whitesmoke;
+    }
+  }

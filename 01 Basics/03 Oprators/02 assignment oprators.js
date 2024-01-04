@@ -1,5 +1,5 @@
 // assignment oprators 
-
+var google = "hello world from mobile"
 // Assignment (=): Assigns the value 5 to the variable x
 let x = 5;
 console.log('x:', x);

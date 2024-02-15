@@ -11,22 +11,38 @@ console.log(array);
 let newArray
 let li
 function renderArray() {
-    array.forEach(items => {
-        li = document.createElement("li")
-        li.innerText = items;
-        todoList.appendChild(li);
-    });
+
+    if (todoList.hasChildNodes() === true) {
+        todoList.innerHTML = '';
+        array.forEach(items => {
+            li = document.createElement("li")
+            todoList.appendChild(li);
+            li.innerText = items;
+
+        });
+    } else {
+        array.forEach(items => {
+            li = document.createElement("li")
+            todoList.appendChild(li);
+            li.innerText = items;
+
+        });
+    }
 }
 
 renderArray()
 
 remove.addEventListener("click", () => {
-    todoList.removeChild(li);
-    array.pop()
-    console.log(
-        array
-    );
-    renderArray()
+    if (array.length === 0) {
+        alert("no name left")
+    } else {
+        todoList.removeChild(li);
+        array.pop()
+        console.log(
+            array
+        );
+        renderArray()
+    }
 })
 
 

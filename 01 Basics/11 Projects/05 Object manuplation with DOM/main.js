@@ -1,4 +1,10 @@
 let objectData = document.querySelector(".objectData");
+let names = document.getElementById("name");
+let phone = document.getElementById("phone");
+let email = document.getElementById("email");
+let isOnline = document.getElementById("isOnline");
+let submit = document.getElementById("submit");
+
 
 let data = [
     {
@@ -22,18 +28,48 @@ let data = [
 
 ]
 console.log(data);
-for (let i = 0; i < data.length; i++) {
-    itemData = data[i];
-    if (itemData.isLoggedIn === true) {
-        OnlineStatues = `online`
+
+function renderData() {
+    objectData.innerHTML = ""
+    for (let i = 0; i < data.length; i++) {
+        itemData = data[i];
+        if (itemData.isLoggedIn === true) {
+            OnlineStatues = `online`
+        }
+        else {
+            OnlineStatues = `offline`
+        }
+        objectData.innerHTML += `<div class="box">
+        <h1>name: ${itemData.name}</h1>
+        <p>phone: ${itemData.phone}</p>
+        <p>email: ${itemData.email}</p>
+        <p>this user is ${OnlineStatues}</p>
+        <div/>`
     }
-    else {
-        OnlineStatues = `offline`
-    }
-    objectData.innerHTML += `<div class="box">
-    <h1>name: ${itemData.name}</h1>
-    <p>phone: ${itemData.phone}</p>
-    <p>email: ${itemData.email}</p>
-    <p>this user is ${OnlineStatues}</p>
-    <div/>`
 }
+
+renderData()
+
+
+submit.addEventListener("click", () => {
+    event.preventDefault();
+    if (isOnline.checked) {
+        isOnline = true
+    } else {
+        isOnline = false
+    }
+
+    let newObj = {
+        name: names.value,
+        phone: phone.value,
+        email: email.value,
+        isLoggedIn: isOnline,
+    }
+
+    data.push(newObj);
+    console.log(data);
+
+    renderData()
+})
+
+

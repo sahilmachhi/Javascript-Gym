@@ -1,32 +1,32 @@
-// class => object 
+// class => object
 
 // instance properties: what they have
 
-        // name 
+// name
 
-        // age 
+// age
 
-        // phone 
+// phone
 
-        // email 
+// email
 
 //  instance methods: what they do
 
-        // talk 
+// talk
 
-        // run 
+// run
 
-        // jump
+// jump
 
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-// example 1 
+// example 1
 
 class username {
-//    setup 
-constructor() {
-    console.log("username is created");
-}
+    //    setup
+    constructor() {
+        console.log("username is created");
+    }
 };
 
 const user = new username()
@@ -45,8 +45,8 @@ class username1 {
     }
 }
 
-const user1 = new username1("Sahil",165,"sahilmachhi29@gmail.com")
-const user2 = new username1("Dilipkumar",170,"dr.dilip40@gmail.com")
-console.log(user1,user2);
+const user1 = new username1("Sahil", 165, "sahilmachhi29@gmail.com")
+const user2 = new username1("abcxyz", 170, "abc@gmail.com")
+console.log(user1, user2);
 
-console.log(user1.introduction(),user2.introduction());
+console.log(user1.introduction(), user2.introduction());

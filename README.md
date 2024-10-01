@@ -1,1 +1,1 @@
-this is my journey of learning javascript from scrach and it covers all topics of javascript with notes.
+this is my journey of learning javascript from scratch and it covers all topics of javascript with notes.
